@@ -1,3 +1,5 @@
+// Consider deleting
+
 const names = [
   'Aaran',
   'Aaren',
