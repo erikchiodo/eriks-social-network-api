@@ -3,7 +3,7 @@ const { ObjectId } = require('mongoose').Types;
 const { User, Thought } = require('../models');
 
 module.exports = {
-  // Get all students
+  // Get all users
   async getUsers(req, res) {
     try {
       const users = await User.find();
@@ -14,7 +14,7 @@ module.exports = {
       return res.status(500).json(err);
     }
   },
-  // Get a single student
+  // Get a single user
   async getSingleUser(req, res) {
     try {
       const user = await User.findOne({ _id: req.params.userId })
@@ -31,7 +31,7 @@ module.exports = {
       return res.status(500).json(err);
     }
   },
-  // create a new student
+  // create a new user
   async createUser(req, res) {
     try {
       const user = await User.create(req.body);
@@ -40,7 +40,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  // Delete a student and remove them from the course
+  // Delete a user and remove them from a thought
   async deleteUser(req, res) {
     try {
       const user = await User.findOneAndRemove({ _id: req.params.userId });
@@ -68,7 +68,7 @@ module.exports = {
     }
   },
 
-  // Add an assignment to a student
+  // Add an assignment to a user
   async addThought(req, res) {
     try {
       console.log('You are adding a thought');
@@ -79,18 +79,18 @@ module.exports = {
         { runValidators: true, new: true }
       );
 
-      if (!student) {
+      if (!user) {
         return res
           .status(404)
-          .json({ message: 'No user found with that ID :(' })
+          .json({ message: 'No user found with that ID' })
       }
 
-      res.json(student);
+      res.json(user);
     } catch (err) {
       res.status(500).json(err);
     }
   },
-  // Remove assignment from a student
+  // Remove assignment from a user
   async removeThought(req, res) {
     try {
       const user = await User.findOneAndUpdate(
@@ -102,7 +102,7 @@ module.exports = {
       if (!user) {
         return res
           .status(404)
-          .json({ message: "No user found with that ID :(" });
+          .json({ message: "No user found with that ID" });
       }
 
       res.json(user);
