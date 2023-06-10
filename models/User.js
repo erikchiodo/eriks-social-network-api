@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
-const thoughtSchema = require('./Thought'); // How do you use this? Is how I've coded it below okay?
+var validator = require("email-validator");
+
 
 // Schema to create User Model
 const userSchema = new Schema(
@@ -15,12 +16,12 @@ const userSchema = new Schema(
       required: true,
       unique: true,
       validate: {
-        validator: emailValidator,
+        validator: validator.validate,
         message: "Invalid email address",
       },
     },
-    thoughts: [{type : Schema.Types.ObjectId, ref: 'thought'}], //When initializing thought table, set to 'thought'
-    friends: [User], //Confirm if this is accurate self-reference
+    thoughts: [{ type: Schema.Types.ObjectId, ref: "thought" }],
+    friends: [{ type: Schema.Types.ObjectId, ref: "user" }],
   },
   {
     toJSON: {
@@ -31,7 +32,7 @@ const userSchema = new Schema(
 );
 
 // TODO: Add a virtual called friendCount that retrieves length of the user's friends array field on query
-thoughtSchema.virtual('friendCount').get(function () {
+userSchema.virtual('friendCount').get(function () {
   return this.friends.length;
 });
 
