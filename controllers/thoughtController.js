@@ -90,7 +90,7 @@ module.exports = {
     }
   },
 
-  // add reaction to a thought
+  // Add reaction to a thought
 async addReaction (req, res) {
   try {
     const thought = await Thought.findOneAndUpdate(
@@ -107,7 +107,7 @@ async addReaction (req, res) {
   }
 },
 
-// remove reaction from a thought
+// Remove reaction from a thought
 async removeReaction (req, res) {
   try {
     const thought = await Thought.findOneAndUpdate(

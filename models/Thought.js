@@ -15,6 +15,10 @@ const thoughtSchema = new Schema(
       type: String,
       required: true,
     },
+    thought: {
+      type: String,
+      required: true,
+    },
     reactions: [reactionSchema],
   },
   {
