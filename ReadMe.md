@@ -1,14 +1,62 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/mit)
 # 18 NoSQL: Social Network API
 
-## Your Task
+## Description
 
-MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data. Over the last part of this course, you’ll use several of the technologies that social networking platforms use in their full-stack applications. Because the foundation of these applications is data, it’s important that you understand how to build and structure the API first.
+Our Challenge was to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. We had to use Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
-Your Challenge is to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the [Express.js](https://www.npmjs.com/package/express) and [Mongoose](https://www.npmjs.com/package/mongoose) packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript `Date` object to format timestamps.
+## Table of Contents
 
-No seed data is provided, so you’ll need to create your own data using Insomnia after you’ve created your API.
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
+
+## Installation
+
+No Installation
+
+
+## Usage
+
+In order to use application, run npm install to install dependencies. If you run npm start, it will start the serveron port 3001. If you go into insomnia you will need to create the following routes:
+
+Friends Folder:
+- Post Friend: http://localhost:3001/api/users/:userId/:friendId
+- Delete Friend: http://localhost:3001/api/users/:userId/:friendId
+
+Users Folder:
+- Delete User: 
+- Put User: 
+- Get All Users:
+- Get User by Id:
+- Post User:
+
+Thoughts Folder:
+
+
+
+  ## License
+  Erik's Social Network API is licensed under [MIT](https://opensource.org/licenses/mit).
+
+## Contributing
+
+No contribution
+
+
+## Tests
+
+No tests
+
+
+## Questions
+
+Link to my [Github Profile](https://github.com/erikchiodo)
+
+If you need to contact me directly, here's my email: erikchiodo@gmail.com!
 
 ## User Story
 

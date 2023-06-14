@@ -6,9 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon index",
-    "seed": "node utils/seed",
-    "heroku-postbuild": "node utils/seed.js"
+    "dev": "nodemon index"
   },
   "dependencies": {
     "email-validator": "^2.0.4",
