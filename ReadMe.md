@@ -5,8 +5,6 @@
 
 Our Challenge was to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. We had to use Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
-
-
 ## Table of Contents
 
 - [Story](#story)
@@ -123,26 +121,26 @@ No Installation
 In order to use application, run npm install to install dependencies. If you run npm start, it will start the server on port 3001. If you go into insomnia you will need to create the following routes:
 
 Friends Folder:
-- Post Friend: http://localhost:3001/api/users/:userId/:friendId
-- Delete Friend: http://localhost:3001/api/users/:userId/:friendId
+- Post Friend: http://localhost:3002/api/users/:userId/:friendId
+- Delete Friend: http://localhost:3002/api/users/:userId/:friendId
 
 Users Folder:
-- Delete User: http://localhost:3001/api/users/:userId
-- Update User: http://localhost:3001/api/users/:userId
-- Get All Users: http://localhost:3001/api/users
-- Get User by Id: http://localhost:3001/api/users/:userId
-- Post User: http://localhost:3001/api/users
+- Delete User: http://localhost:3002/api/users/:userId
+- Update User: http://localhost:3002/api/users/:userId
+- Get All Users: http://localhost:3002/api/users
+- Get User by Id: http://localhost:3002/api/users/:userId
+- Post User: http://localhost:3002/api/users
 
 Thoughts Folder:
 - Delete Thought: 
-- Update Thought: http://localhost:3001/api/thoughts/:thoughtId
-- Get All Thoughts: http://localhost:3001/api/thoughts
-- Get Thought by Id: http://localhost:3001/api/thoughts/:thoughtId
-- Post Thought: http://localhost:3001/api/thoughts
+- Update Thought: http://localhost:3002/api/thoughts/:thoughtId
+- Get All Thoughts: http://localhost:3002/api/thoughts
+- Get Thought by Id: http://localhost:3002/api/thoughts/:thoughtId
+- Post Thought: http://localhost:3002/api/thoughts
 
 Reactions Folder:
-- Create Reaction: http://localhost:3001/api/thoughts/:thoughtId/reactions
-- Remove Reaction: http://localhost:3001/api/thoughts/:thoughtId/reactions/:reactionId
+- Create Reaction: http://localhost:3002/api/thoughts/:thoughtId/reactions
+- Remove Reaction: http://localhost:3002/api/thoughts/:thoughtId/reactions/:reactionId
 
   ## License
   Erik's Social Network API is licensed under [MIT](https://opensource.org/licenses/mit).
