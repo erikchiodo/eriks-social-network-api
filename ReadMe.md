@@ -120,7 +120,7 @@ No Installation
 
 ## Usage
 
-In order to use application, run npm install to install dependencies. If you run npm start, it will start the serveron port 3001. If you go into insomnia you will need to create the following routes:
+In order to use application, run npm install to install dependencies. If you run npm start, it will start the server on port 3001. If you go into insomnia you will need to create the following routes:
 
 Friends Folder:
 - Post Friend: http://localhost:3001/api/users/:userId/:friendId
